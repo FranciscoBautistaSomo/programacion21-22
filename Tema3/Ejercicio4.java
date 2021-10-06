@@ -1,4 +1,4 @@
-public class Ejercicio1{
+public class Ejercicio4{
 
   public static void main(String[] args){
     //Programa para realizar operaciones matemáticas.
