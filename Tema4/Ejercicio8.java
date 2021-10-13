@@ -20,11 +20,11 @@ public class Ejercicio8{
     // PLOBLEMA CON EL COMPARADOR LOGICO OR.
     if ( media < 5.0){
         System.out.print("Lo siento su media es insuficiente.");
-      }else if((media>=5.0) || (media<6.0)){
+      }else if((media>=5.0) && (media<6.0)){
          System.out.print("Su media es de suficiente.");
-        }else if((media>=6.0) || (media<7.0)){
+        }else if((media>=6.0) && (media<7.0)){
             System.out.print("Su media es de bien.");
-          }else if((media>=7.0) || (media<8.0)){
+          }else if((media>=7.0) && (media<9.0)){
             System.out.print("Su media es de notable.");
             } else {
                 System.out.print("Enhorabuena, Su media es de sobresaliente.");
