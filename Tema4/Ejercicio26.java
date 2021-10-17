@@ -27,11 +27,10 @@ public class Ejercicio26 {
     System.out.println("Venta de entradas CineCampa");
     System.out.print("¿Cuantas entradas quiere?");
     numeroEntradas=Integer.parseInt(System.console().readLine());
-    //Cálculo parejas. 
-      if (numeroEntradas >= 2){
-          parejas = true;}
-          
+    
+    //Cálculo parejas.     
       if ((numeroEntradas % 2) == 0){
+              parejas = true;
               numParejas = numeroEntradas/2;
       }else{
               impares = true;
