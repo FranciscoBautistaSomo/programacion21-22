@@ -8,9 +8,7 @@ public class Ejercicio11 {
   los 5 primeros números enteros a partir de uno que se introduce por teclado.*/
 	
 	public static void main (String[] args) {
-    int numero=0;
-    int cuadrado=1;
-    int cubo=1;
+    int numero=0;    
     Scanner txt = new Scanner(System.in);
     
 		System.out.print("Introduzca el número a calcular: ");
