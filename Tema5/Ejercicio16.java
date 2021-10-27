@@ -10,27 +10,28 @@ public class Ejercicio16 {
 	public static void main (String[] args) {
 		int numero = 1;
     double divisor = 2;
-    boolean primo = false;
+    boolean primo = true;
     
     Scanner txt = new Scanner(System.in);
-    System.out.print(primo);
+    //System.out.print(primo);
     
     System.out.print("Introduzca el número que quiere introducir: ");
     numero = txt.nextInt();
     
-    do
+    for (int i = 2; i < numero; i++)
     {
-      if ((numero % divisor) == 0){
-          primo = false;
-          System.out.print("El número introducido  no es primo.");
-          System.out.print(primo);
-      }else{
-          System.out.print("El número introducido es primo.");
-          System.out.print(divisor);
-        }        
-      divisor++;
-    } while (primo = false);
+      if ((numero % i) == 0){
+          primo = false;     
+          
+      }
+    }   
     
+    if(primo == true){
+      System.out.print("El número introducido es primo.");
+      
+      }else {
+        System.out.print("El número introducido no es primo.");
+        }
 	}
 }
 
