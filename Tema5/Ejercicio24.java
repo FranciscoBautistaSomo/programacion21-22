@@ -26,20 +26,32 @@ con n filas como en la siguiente figura:
       {
         System.out.print(" ");
       }
+      
+      //lado izquierdo
       for (int k = 0; k <numPira ; k++)
       {        
         dibuja = k;
         dibuja = k+1;
-        System.out.print(dibuja);        
-        if(i >= 1 ){
-          dibuja--;
-          System.out.print(dibuja);
-          }           
+        
+        //Contralamos si el número a dibujar es de dos dígitos.
+        if(dibuja >=10){
+          dibuja %=10;
+          }
+        System.out.print(dibuja); 
+                   
+      }
+      //lado derecho piramide
+      for (int k = numPira-1; k > 0  ; k--)
+      {        
+        dibuja = k;
+        //dibuja = k-1;
+        System.out.print(dibuja); 
+                   
       }
       
       
       System.out.println();
-      numPira = numPira+2;
+      numPira = numPira+1;
       
     }
     

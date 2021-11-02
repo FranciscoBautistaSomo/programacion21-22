@@ -21,7 +21,14 @@ public class Ejercicio35 {
       //Parte superior X.
       for (int i = 0; i <= (puntoMed); i++)
       {
-          //punto intermedio X
+                   
+          //pintar huecos externos X
+          for (int k = 0; k < huecoExtX ; k++)
+          {
+            System.out.print(" ");
+          }
+          
+         //punto intermedio X
           if (i != puntoMed)
           {
             System.out.print("*");
@@ -35,11 +42,7 @@ public class Ejercicio35 {
           
           System.out.println("*");
           
-          //pintar huecos externos X
-          for (int k = 0; k < huecoExtX ; k++)
-          {
-            System.out.print(" ");
-          }
+          
           
           huecoExtX +=1;                   
           huecoX -=2;          
@@ -47,7 +50,7 @@ public class Ejercicio35 {
       
         //Parte inferior X.
         huecoX = 1;
-        huecoExtX = 1;
+        huecoExtX = alturaX-((alturaX+1)/2);
         
       for (int i = puntoMed; i < alturaX; i++)
       {   
@@ -68,7 +71,7 @@ public class Ejercicio35 {
           System.out.println("*");                   
           
           huecoExtX -=1;                   
-          huecoX +=1;
+          huecoX +=2;
       }
       
       
