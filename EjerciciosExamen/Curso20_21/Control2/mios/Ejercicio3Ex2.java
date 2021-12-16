@@ -1,4 +1,4 @@
-//Ejercicio 2 examen 2 curso 2020/21
+//Ejercicio 3 examen 2 curso 2020/21
 public class Ejercicio3Ex2{
   public static void main(String[] args){
     final int FILA;
