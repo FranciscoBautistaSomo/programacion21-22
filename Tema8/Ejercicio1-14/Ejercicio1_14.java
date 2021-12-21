@@ -8,7 +8,7 @@ public class Ejercicio1_14{
         long potenciado = 1;
         boolean verPrimo = false;
         boolean capicuo = false;
-        System.out.print("Introduzca un número entero: ");
+        System.out.print("Introduzca un número entero ahora: ");
         numero = Integer.parseInt(System.console().readLine());
         
         //Calculo si un número es capicuo.
@@ -47,5 +47,27 @@ public class Ejercicio1_14{
 
         //Voltear número.
         System.out.println("El "+numero+" volteado queda "+funcMates.volteado(numero));
+
+        //Sacar el digito N de un numero
+        System.out.println("Introduzca la posición del "+numero+" que desea extraer: ");
+        int posicion = Integer.parseInt(System.console().readLine());
+          if (posicion > 0) {
+            posicion--; 
+          }               
+        System.out.println("El digito extraido es: "+funcMates.digitoN(numero, posicion));
+
+        //Sacar la posicion de un digito dado
+        System.out.println("Introduzca el digito buscado en el "+numero+" dado.");
+        int digito = Integer.parseInt(System.console().readLine());
+
+        //averiguar la posicion de un digito dado dentro de un número.
+        if (funcMates.posicionDeDigito(numero, digito)==-1) {
+          System.out.println("Número no encontrado");
+        }else {
+          System.out.println("El número buscado se  encuentra en la posicion "+funcMates.posicionDeDigito(numero, digito)); 
+        }
+
+        
+
     }
 }

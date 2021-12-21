@@ -61,6 +61,7 @@ public class funcMates{
       return numeroDigitos;
     }
 
+    //Voltear numero
     public static int volteado(int numero) {
       int volteado = 0;
       while (numero>0){
@@ -69,4 +70,44 @@ public class funcMates{
       }
       return volteado;
     }
+
+    public static int digitoN(int numero, int pos) {
+      int numeroArray[];
+      numeroArray = new int[numDigit(numero)];
+      
+      numero = volteado(numero);
+      int i = 0;
+      do {        
+        int resto = numero%10;
+        numero /= 10;        
+        numeroArray[i]=resto;
+        i++;      
+        
+      } while (numero >0);
+
+      return numeroArray[pos];
+    }
+
+    public static int posicionDeDigito(int numero, int digito) {
+      int numeroArray[];
+      numeroArray = new int[numDigit(numero)];
+
+      numero = volteado(numero);
+      int i = 0;
+      do {        
+        int resto = numero%10;
+        numero /= 10;        
+        numeroArray[i]=resto;
+        i++;       
+      } while (numero >0);
+
+      for (int j = 0; j < numeroArray.length; j++) {
+        if (numeroArray[j]==digito) {
+          return j;
+        }
+      }
+      return -1;
+
+    }
+
 }
