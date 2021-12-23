@@ -35,7 +35,7 @@ public class Ejercicio1_14{
           System.out.println("Opción elegida "+opcion);
         }else if (opcion==14) {
           System.out.println("Opción elegida "+opcion);
-        }else{
+        }else if(opcion <14){
           System.out.println("Opción elegida "+opcion);
           System.out.print("Introduzca un número entero: ");
           numero = Integer.parseInt(System.console().readLine());
@@ -60,7 +60,6 @@ public class Ejercicio1_14{
             }else{
                 System.out.println("El número "+numero+" no es primo.");
             }
-
             break;
           case 3:
             //Cálculo del numero primo siguiente.
@@ -77,7 +76,7 @@ public class Ejercicio1_14{
             break;
           case 5:
             //Cálculo del número de digitos
-            int numdigitos = funcMates.numDigit(numero);
+            int numdigitos = funcMates.digitos(numero);
             System.out.println("El "+numero+" tiene "+numdigitos+" digito/s,");        
             break;
           case 6:
@@ -98,10 +97,10 @@ public class Ejercicio1_14{
             System.out.println("Introduzca el digito buscado en el "+numero+" dado.");
             digito = Integer.parseInt(System.console().readLine());            
             
-            if (funcMates.posicionDeDigito(numero, digito)==-1) {
+            if (funcMates.posicionDeDigito(numero, digito).equals("-1")) {
               System.out.println("Número no encontrado");
             }else {
-              System.out.println("El número buscado se  encuentra en la posicion "+funcMates.posicionDeDigito(numero, digito)); 
+              System.out.println("El número buscado se  encuentra en la/s posicion/es "+funcMates.posicionDeDigito(numero, digito)); 
             }
             break;
           case 9:
@@ -110,7 +109,7 @@ public class Ejercicio1_14{
             do {
               System.out.println("Introduzca el numero de digitos que quiere cortar del "+numero+" detrás.");
               digitcorta = Integer.parseInt(System.console().readLine());          
-            } while (digitcorta >funcMates.numDigit(numero));
+            } while (digitcorta >funcMates.digitos(numero));
             System.out.println("El numero cortado queda "+funcMates.quitarPorDetras(numero, digitcorta));
             break;
           case 10:
@@ -119,7 +118,7 @@ public class Ejercicio1_14{
             do {
               System.out.println("Introduzca el numero de digitos que quiere cortar del "+numero+" delante.");
               digitcortaDel = Integer.parseInt(System.console().readLine());          
-            } while (digitcortaDel >funcMates.numDigit(numero));
+            } while (digitcortaDel >funcMates.digitos(numero));
             System.out.println("El numero cortado queda "+funcMates.quitarPorDelante(numero, digitcortaDel));
             break;
           case 11:
