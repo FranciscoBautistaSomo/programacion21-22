@@ -97,7 +97,7 @@ public class Ejercicio1_14{
             System.out.println("Introduzca el digito buscado en el "+numero+" dado.");
             digito = Integer.parseInt(System.console().readLine());            
             
-            if (funcMates.posicionDeDigito(numero, digito).equals("-1")) {
+            if (funcMates.posicionDeDigito(numero, digito)==-1) {
               System.out.println("Número no encontrado");
             }else {
               System.out.println("El número buscado se  encuentra en la/s posicion/es "+funcMates.posicionDeDigito(numero, digito)); 

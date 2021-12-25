@@ -43,9 +43,14 @@ public class funcMates{
     //Potencia Ejercicio 4
     public static long potencia(long numero, long exp){
       long poten=1;
-      for (int i = 1; i <= exp; i++) {
-        poten *= numero;
-      }      
+      if (exp == 0) {
+        poten=1;
+      }else{
+        for (int i = 1; i <= exp; i++) {
+          poten *= numero;
+        }
+      }
+           
       return poten;
     }
 
@@ -78,8 +83,7 @@ public class funcMates{
     public static int digitoN(int numero, int pos) {
       int numeroArray[];
       numeroArray = new int[digitos(numero)];
-      int arrayPos[] = new int[digitos(numero)];
-      //numero = volteado(numero);
+      int arrayPos[] = new int[digitos(numero)];      
       int i = 0;
       do {        
         int resto = numero%10;
@@ -94,12 +98,13 @@ public class funcMates{
       }      
       return arrayPos[pos];
     }
-    // Ejercicio 8
-    public static String posicionDeDigito(int numero, int digito) {
+    
+    //Ejercicio 8
+    public static int posicionDeDigito(int numero, int digito) {
       int numeroArray[];
       numeroArray = new int[digitos(numero)];
-      int arrayPos[]= new int[digitos(numero)];
-            
+
+      numero = volteado(numero);
       int i = 0;
       do {        
         int resto = numero%10;
@@ -108,22 +113,15 @@ public class funcMates{
         i++;       
       } while (numero >0);
 
-      for (int k = 0; k < numeroArray.length; k++) {
-        arrayPos[numeroArray.length-1-k]=numeroArray[k];
-      } 
-
-      String posicion="";
-      for (int j = 0; j < arrayPos.length; j++) {
-        if (arrayPos[j]==digito) {
-          posicion = posicion+j+", ";
+      for (int j = 0; j < numeroArray.length; j++) {
+        if (numeroArray[j]==digito) {
+          return j;
         }
       }
-      if (posicion.equals("")) {
-        return "-1";
-      }else{
-        return posicion;
-      }
-   }
+      return -1;
+
+    }    
+    
     // Ejercicio 9
     public static int quitarPorDetras(int numero, int digit) {
       for (int i = 0; i < digit; i++) {
@@ -188,5 +186,22 @@ public class funcMates{
       int auxNumero2 = digitos(numero2);
       int numeroJunto = numero*(int)potencia(10, auxNumero2)+numero2;
       return numeroJunto;
+    }
+
+    //Ejercicio 17
+    public static int binarioDecimal(int binario) {
+      int decimal =0;
+      int dig = digitos(binario);
+      int aux = dig-1;
+      for (int i = 0; i < dig; i++) {
+        
+        /*if (aux>0) {
+          aux--;
+        }*/
+        int multi = funcMates.digitoN(binario, i);
+        decimal += multi*(int)potencia(2, aux);
+        aux--;       
+      }
+      return decimal;
     }
 }
