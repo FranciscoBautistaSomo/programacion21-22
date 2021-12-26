@@ -188,7 +188,7 @@ public class funcMates{
       return numeroJunto;
     }
 
-    //Ejercicio 17
+    //Ejercicio 17 Pasar de binario a Decimal.
     public static int binarioDecimal(int binario) {
       int decimal =0;
       int dig = digitos(binario);
@@ -199,9 +199,28 @@ public class funcMates{
           aux--;
         }*/
         int multi = funcMates.digitoN(binario, i);
-        decimal += multi*(int)potencia(2, aux);
+        decimal +=multi*(int)potencia(2, aux);
         aux--;       
       }
       return decimal;
+    }
+
+    //Ejercicio 18 Pasar de Decimal a binario.
+    public static long decimalBinario(int decimal) {
+      String binarioTxt = "";
+      long binario = 0L;
+      //int dig = digitos(decimal);
+      int resto = 0;
+      int cociente;
+      do {
+        resto = decimal%2;
+        decimal= decimal/2;
+        cociente = decimal;
+        binarioTxt=resto+binarioTxt;
+      } while (cociente >0);
+
+      return binario = Long.parseLong(binarioTxt);
+
+      
     }
 }
