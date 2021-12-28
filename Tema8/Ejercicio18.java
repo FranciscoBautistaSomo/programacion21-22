@@ -1,4 +1,5 @@
 import libriaMatematica.funcMates;
+import libriaMatematica.funcMates2;
 public class Ejercicio18 {
     public static void main(String[] args) {
      int numDecimal=0;
@@ -15,7 +16,7 @@ public class Ejercicio18 {
         }
      } while (!correcto);
 
-     System.out.print("El número "+numDecimal+" en binario equivale a :"+funcMates.decimalBinario(numDecimal));
+     System.out.print("El número "+numDecimal+" en binario equivale a :"+funcMates2.decimalBinario(numDecimal));
      
 
     }
