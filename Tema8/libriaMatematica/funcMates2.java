@@ -63,13 +63,13 @@ public class funcMates2{
     }
 
     //Ejercicio 18 Pasar de Decimal a binario.
-    public static long decimalBinario(int decimal) {
+    public static long decimalBinario(long decimal) {
       String binarioTxt = "";
       //int dig = digitos(decimal);
       int resto = 0;
-      int cociente;
+      long cociente;
       do {
-        resto = decimal%2;
+        resto = (int)decimal%2;
         decimal= decimal/2;
         cociente = decimal;
         binarioTxt=resto+binarioTxt;
@@ -79,13 +79,13 @@ public class funcMates2{
     }
     //Ejercicio 19 Conversiones varias.
     // De decimal a Octal.
-    public static long decimalOctal(int decimal) {
+    public static long decimalOctal(long decimal) {
       String octalTxt = "";
       //int dig = digitos(decimal);
       int resto = 0;
-      int cociente;
+      long cociente;
       do {
-        resto = decimal%8;
+        resto = (int)decimal%8;
         decimal= decimal/8;
         cociente = decimal;
         octalTxt=resto+octalTxt;
@@ -102,6 +102,39 @@ public class funcMates2{
         
         int multi = digitoN(octal, i);
         decimal +=(long)multi*potencia(8, aux);
+        aux--;       
+      }
+      return decimal;
+    }
+
+     // De decimal a Hexa.
+     public static String decimalHexa(long decimal) {
+      String hexaTxt = "";
+      //int dig = digitos(decimal);
+      String arrayHexa []={"0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"};
+      int resto = 0;
+      long cociente;
+      do {
+        resto = (int)decimal%16;
+        decimal= decimal/16;
+        cociente = decimal;
+        hexaTxt=arrayHexa[resto]+hexaTxt;
+      } while (cociente >0);
+
+      return hexaTxt;
+    }
+
+    // De hexa a decimal
+    public static long hexaDecimal(String hexa) {
+      long decimal =0;
+      String digitosHexa = "0123456789ABCDEF";
+      int dig = hexa.length();
+      int aux = dig-1;
+      for (int i = 0; i < dig; i++) {
+        
+        //int multi = hexa.charAt(i)-'0';
+        int multi = digitosHexa.indexOf(hexa.charAt(i));
+        decimal +=(long)multi*potencia(16, aux);
         aux--;       
       }
       return decimal;
