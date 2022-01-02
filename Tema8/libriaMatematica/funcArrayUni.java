@@ -88,14 +88,32 @@ public class funcArrayUni {
         return b;
     }
 
-    //Ejercicio 27 Voltear array.
+    //Ejercicio 27 Rotar array derecha.
     public static int[] rotaDerechaArrayInt(int x[], int pos) {
-        int aux = pos;
-        for (int i = 0; i < x.length; i++) {
-            x[i+pos] = x[i]; 
-        }
-        return x;
+        int aux;
+        int[] a = x.clone();
+        while (pos-- > 0) {
+            aux =a[a.length-1];
+            for (int i = a.length-1; i > 0; i--) {
+                a[i] = a[i-1]; 
+            }
+            a[0]=aux;
+        }        
+        return a;
     }
     
+    //Ejercicio 28 Rotar array derecha.
+    public static int[] rotaIzquierdaArrayInt(int x[], int pos) {
+        int aux;
+        int[] a = x.clone();
+        while (pos-- > 0) {
+            aux =a[0];
+            for (int i = 0; i < a.length-1; i++) {
+                a[i] = a[i+1]; 
+            }
+            a[a.length-1]=aux;
+        }        
+        return a;
+    }
 }
 

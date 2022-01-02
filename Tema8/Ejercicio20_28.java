@@ -1,9 +1,16 @@
 import libriaMatematica.funcArrayUni;
 public class Ejercicio20_28 {
     public static void main(String[] args) {
-        int numeroBuscado = 0;        
+        int numeroBuscado = 0;
+        System.out.print("Ingrese el tamaño de la matriz:");
+        int dimMatriz = Integer.parseInt(System.console().readLine());
+        System.out.print("Ingrese el valor menor de la matriz:");
+        int min = Integer.parseInt(System.console().readLine());
+        System.out.print("Ingrese el valor mayor de la matriz:");
+        int max = Integer.parseInt(System.console().readLine());
+        System.out.println("<----------------------------------------------------->");
         //Generar Array
-        int a[] = funcArrayUni.generaArrayInt(10, 1, 10);
+        int a[] = funcArrayUni.generaArrayInt(dimMatriz, min, max);
 
         //Mostrar por consola Array
         funcArrayUni.muestraArrayInt(a);
@@ -33,11 +40,18 @@ public class Ejercicio20_28 {
         funcArrayUni.muestraArrayInt(b);
 
         //Rotar a la derecha n posiciones.
-        System.out.print("¿Cuantas posiciones quiere rotar el array?");
+        System.out.print("¿Cuantas posiciones quiere rotar el array a la derecha?");
         int posiciones = Integer.parseInt(System.console().readLine());
         int c[] = funcArrayUni.rotaDerechaArrayInt(a, posiciones);
 
         funcArrayUni.muestraArrayInt(c);
+
+        //Rotar a la izquierda n posiciones.
+        System.out.print("¿Cuantas posiciones quiere rotar el array a la izquierda?");
+        posiciones = Integer.parseInt(System.console().readLine());
+        int d[] = funcArrayUni.rotaIzquierdaArrayInt(a, posiciones);
+
+        funcArrayUni.muestraArrayInt(d);
 
     }
 }
