@@ -139,4 +139,31 @@ public class funcMates2{
       }
       return decimal;
     }
+    //Ejercicio 35 convertir a palotes.
+    public static String convierteEnPalotes(int n) {
+      String palotes="";
+      int resto = 0;
+      String unidad ="";
+      int digito = 0;
+      do {
+        resto = n%10;
+        n /=10;
+        unidad ="";
+        digito++;
+        if (resto>0) {          
+          for (int i = 0; i < resto; i++) {
+            unidad +=  "|";
+            if ((i==resto-1) && (digito>1)) {
+              unidad += "-";
+            } 
+          }
+        }else if(resto==0){
+            unidad +="-";
+        }
+        palotes = unidad+palotes;        
+      } while (n>0);
+
+      return palotes;
+      
+    }
 }

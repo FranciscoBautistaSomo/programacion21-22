@@ -71,24 +71,22 @@ public class funcArrayBi {
     //Ejercicio 34 sacar diagonal de array bi en array uni.
     public static int[] diagonal(int x[][], int f, int c, String direc) {
         
-        /*if (x.length<=x[0].length) {
-            int [] diagonal = new int[x.length];
-        } else if (x.length>x[0].length){
-            int [] diagonal = new int[x.length];
-        }*/
+        int[] diagonalAux = new int[1000];
         
-        int [] diagonal = new int[x.length-f];
         int aux = 0;
         
-            for (int i = f; i < x.length; i++) {
-                for (int j = c; j < x[0].length; j++) {
-                    if (f==c && direc.equals("nose")) {                        
-                        if (i==j) {
-                            diagonal[aux]=x[i][j];
-                            aux++;
-                        }                                            
+            for (int i = 0; i < x.length; i++) {
+                for (int j = 0; j < x[0].length; j++) {
+                    if ( (((c-j)==(f-i)) && (direc.equals("nose"))) || (((c-j)==(i-f)) && (direc.equals("neso"))) ) {
+                        diagonalAux[aux]=x[i][j];
+                        aux++;
                     }
                 }
+            }
+
+            int[] diagonal = new int[aux];
+                for (int j = 0; j < aux; j++) {
+                    diagonal[j]=diagonalAux[j];
             }
         
         return diagonal;
