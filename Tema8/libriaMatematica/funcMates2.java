@@ -1,7 +1,7 @@
 package libriaMatematica;
+import libriaMatematica.funcMates;
 
-public class funcMates2{
-     
+public class funcMates2{     
 
     //Potencia Ejercicio 4
     public static long potencia(long numero, int exp){
@@ -162,8 +162,35 @@ public class funcMates2{
         }
         palotes = unidad+palotes;        
       } while (n>0);
+      return palotes;      
+    }
 
-      return palotes;
+    //Ejercicio 37
+    public static String convierteEnMorse(int n) {
       
+      String[] morse = {" _ _ _ _ _ ",". _ _ _ _ ", " . . _ _ _ ", " . . . _ _ ", " . . . . _ ", " . . . . . ", " _ . . . . ", " _ _ . . . ", " _ _ _ . . ", " _ _ _ _ . "};
+
+      String total ="";
+
+      for (int i = 0; i < funcMates.digitos(n); i++) {
+        total += morse[funcMates.digitoN(n, i)];
+      }     
+      return total;
+    }
+    //Ejercicio 39
+    public static String convierteEnPalabras(int n) {
+      
+      String[] morse = {" cero "," uno ", " dos ", " tres ", " cuatro ", " cinco ", " seis ", " siete ", " ocho ", " nueve "};
+
+      String total ="";
+      int longitud = funcMates.digitos(n);
+      for (int i = 0; i < funcMates.digitos(n); i++) {
+        if (i<longitud-1) {
+          total += morse[funcMates.digitoN(n, i)]+", ";
+        } else {
+          total += morse[funcMates.digitoN(n, i)];
+        }        
+      }     
+      return total;
     }
 }

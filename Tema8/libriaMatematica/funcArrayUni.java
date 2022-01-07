@@ -115,5 +115,105 @@ public class funcArrayUni {
         }        
         return a;
     }
+
+    //Ejercicio36.
+    // Devuelve un array con todos los
+    // números primos que se encuentren
+    // en otro array que se pasa como
+    // parámetro.
+    // Obviamente el tamaño del array
+    // que se devuelve será menor o
+    // igual al que se pasa como
+    // parámetro.
+    public static int[] filtrarPrimos(int x[]) {
+        int aux = 0;        
+        int [] arrayPrimosAux = new int[x.length];
+        
+        for (int i = 0; i < x.length; i++) {
+            if (funcMates.esPrimo(x[i])) {
+                arrayPrimosAux[aux]=x[i];
+                aux++;
+            } else {
+                arrayPrimosAux[aux]=-1;
+            }
+        }
+        int [] arrayPrimos = new int[aux];
+        if (aux == 0) {
+            aux = 1;
+            arrayPrimos = new int[aux];
+            arrayPrimos[0]=-1;
+            return arrayPrimos;
+        } else {
+            for (int i = 0; i < arrayPrimos.length; i++) {
+            arrayPrimos[i] = arrayPrimosAux[i];
+            }       
+            return arrayPrimos;
+        }
+    }
+    //Ejercicio38.
+    // Devuelve un array con todos los números
+    // capicúa que se encuentren en otro array
+    // que se pasa como parámetro.
+    // Obviamente el tamaño del array que se
+    // devuelve será menor o igual al que se
+    // pasa como parámetro.
+    public static int[] filtraCapicuas(int x[]) {
+        int aux = 0;        
+        int [] arrayCapicuaAux = new int[x.length];
+        
+        for (int i = 0; i < x.length; i++) {
+            if (funcMates.esCapicua(x[i])) {
+                arrayCapicuaAux[aux]=x[i];
+                aux++;
+            } else {
+                arrayCapicuaAux[aux]=-1;
+            }
+        }
+        int [] arrayCapicua = new int[aux];
+        if (aux == 0) {
+            aux = 1;
+            arrayCapicua = new int[aux];
+            arrayCapicua[0]=-1;
+            return arrayCapicua;
+        } else {
+            for (int i = 0; i < arrayCapicua.length; i++) {
+                arrayCapicua[i] = arrayCapicuaAux[i];
+            }       
+            return arrayCapicua;
+        }
+    }
+    //Ejercicio40.
+    // Devuelve un array con todos los números
+    // que contienen el 7 (por ej. 7, 27, 782)
+    // que se encuentren en otro array que se
+    // pasa como parámetro. El tamaño del array
+    // que se devuelve será menor o igual al
+    // que se pasa como parámetro.
+    public static int[] filtraCon7(int x[]) {
+        int aux = 0;        
+        int [] arrayCon7Aux = new int[x.length];
+        
+        for (int i = 0; i < x.length; i++) {
+            if (funcMates.posicionDeDigito(x[i], 7)!= -1) {
+                arrayCon7Aux[aux]=x[i];
+                aux++;
+            } else {
+                arrayCon7Aux[aux]=-1;
+            }
+        }
+        int [] arrayCon7 = new int[aux];
+        if (aux == 0) {
+            aux = 1;
+            arrayCon7 = new int[aux];
+            arrayCon7[0]=-1;
+            return arrayCon7;
+        } else {
+            for (int i = 0; i < arrayCon7.length; i++) {
+                arrayCon7[i] = arrayCon7Aux[i];
+            }       
+            return arrayCon7;
+        }
+    }
+
 }
 

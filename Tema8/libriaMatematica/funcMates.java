@@ -208,7 +208,6 @@ public class funcMates{
     //Ejercicio 18 Pasar de Decimal a binario.
     public static long decimalBinario(int decimal) {
       String binarioTxt = "";
-      long binario = 0L;
       //int dig = digitos(decimal);
       int resto = 0;
       int cociente;
@@ -219,7 +218,7 @@ public class funcMates{
         binarioTxt=resto+binarioTxt;
       } while (cociente >0);
 
-      return binario = Long.parseLong(binarioTxt);
+      return Long.parseLong(binarioTxt);
 
       
     }
