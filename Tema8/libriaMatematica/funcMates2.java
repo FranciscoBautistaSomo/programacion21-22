@@ -1,5 +1,4 @@
 package libriaMatematica;
-import libriaMatematica.funcMates;
 
 public class funcMates2{     
 

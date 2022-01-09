@@ -17,7 +17,7 @@ public class Ejercicio17 {
             }
             if (!esbinario) {
                 System.out.print("Error, "+ binarioNum+" no es binario. Introduzca un número binario: ");
-                binarioNum = Integer.parseInt(System.console().readLine());
+                binarioNum = Long.parseLong(System.console().readLine());
             }    
 
         } while (!esbinario);
