@@ -188,6 +188,25 @@ public class funcMates{
       return numeroJunto;
     }
 
+    public static int juntaNumeros2(int num1, int num2) {
+      
+      int auxNum1 = num1;
+      int auxNum2 = num2;
+      int digito2 = 0;
+        while (auxNum2>0) {
+          digito2 = quitarPorDetras(auxNum2, digitos(auxNum2)-1);
+          auxNum1 = pegarPorDetras(auxNum1, digito2); 
+          auxNum2 = quitarPorDelante(auxNum2, 1);
+        }
+        
+        if (digitos(auxNum1)<(digitos(num1)+digitos(num2)) ) {
+          int exp = (digitos(num1)+digitos(num2))-digitos(auxNum1);
+          auxNum1 *= (int)potencia(10, exp);
+        }
+      
+      return auxNum1;
+    }
+
     //Ejercicio 17 Pasar de binario a Decimal.
     public static int binarioDecimal(int binario) {
       int decimal =0;

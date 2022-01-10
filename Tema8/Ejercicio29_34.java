@@ -19,7 +19,7 @@ public class Ejercicio29_34 {
         funcArrayBi.muestraArrayIntBi(a);
 
         //Sacar fila dada.
-        System.out.print("Introduzca la fila que quiere sacar: ");
+        /*System.out.print("Introduzca la fila que quiere sacar: ");
         int f = Integer.parseInt(System.console().readLine());
         int mf[] = funcArrayBi.filaDeArrayBiInt(a, f);
 
@@ -47,7 +47,7 @@ public class Ejercicio29_34 {
                     System.out.printf("El valor %d en la fila %d y la columna %d es punto silla",b[i][j], i, j);
                 }
             }
-        }
+        }*/
 
         //Ejercicio sacar diagonal.
         System.out.print("Introduzca la fila para iniciar la diagonal:");
@@ -56,7 +56,7 @@ public class Ejercicio29_34 {
         int columDia = Integer.parseInt(System.console().readLine());
         System.out.print("Introduzca la dirección de la diagonal(nose o neso):");
         String dierccion = System.console().readLine();
-        int[] diagonal = funcArrayBi.diagonal(a, filaDia, columDia, dierccion);
+        int[] diagonal = funcArrayBi.diagonal_2(a, filaDia, columDia, dierccion);
 
         funcArrayUni.muestraArrayInt(diagonal);
     
