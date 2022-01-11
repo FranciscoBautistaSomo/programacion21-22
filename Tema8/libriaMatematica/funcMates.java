@@ -193,10 +193,16 @@ public class funcMates{
       int auxNum1 = num1;
       int auxNum2 = num2;
       int digito2 = 0;
-        while (auxNum2>0) {
-          digito2 = quitarPorDetras(auxNum2, digitos(auxNum2)-1);
+      int auxLong = digitos(auxNum2);
+        while (auxLong>0) {
+          if (auxLong != digitos(auxNum2)) {
+            digito2 = 0;
+          }else{
+            digito2 = quitarPorDetras(auxNum2, digitos(auxNum2)-1);
+            auxNum2 = quitarPorDelante(auxNum2, 1);
+          }         
           auxNum1 = pegarPorDetras(auxNum1, digito2); 
-          auxNum2 = quitarPorDelante(auxNum2, 1);
+          auxLong--;
         }
         
         if (digitos(auxNum1)<(digitos(num1)+digitos(num2)) ) {

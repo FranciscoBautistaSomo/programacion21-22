@@ -56,7 +56,7 @@ public class Ejercicio29_34 {
         int columDia = Integer.parseInt(System.console().readLine());
         System.out.print("Introduzca la dirección de la diagonal(nose o neso):");
         String dierccion = System.console().readLine();
-        int[] diagonal = funcArrayBi.diagonal_2(a, filaDia, columDia, dierccion);
+        int[] diagonal = funcArrayBi.diagonal(a, filaDia, columDia, dierccion);
 
         funcArrayUni.muestraArrayInt(diagonal);
     

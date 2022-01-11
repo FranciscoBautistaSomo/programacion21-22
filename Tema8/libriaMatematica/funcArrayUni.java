@@ -215,5 +215,34 @@ public class funcArrayUni {
         }
     }
 
+    //Ejercicio 50
+    public static int[] mezcla(int[] a, int[] b) {
+        int[] mezcla = new int[a.length+b.length];
+        int aux =0;
+        int contador = 0;
+        int ultimo = 0;
+        if (a.length>b.length) {
+            ultimo = a.length;
+        } else {
+            ultimo = b.length;
+        }
+        
+        for (int i = 0; i < ultimo; i++) {
+            if(contador < a.length){
+                mezcla[aux]=a[i];
+                aux++;
+            }
+            if(contador < b.length){
+                mezcla[aux]=b[i];
+                aux++;
+            }
+            contador++;        
+        }
+               
+        return mezcla;
+        
+        
+    }
+
 }
 
