@@ -215,6 +215,24 @@ public class funcArrayUni {
         }
     }
 
+    //Ejercicio 48
+    public static int[] concatena(int[]a, int[]b) {
+        int[] conca = new int[a.length+b.length];
+        int aux =0;
+        
+        for (int i = 0; i < a.length; i++) {
+            
+            conca[i]=a[i];            
+           
+        }
+        
+        for (int i = a.length; i < conca.length; i++) {
+            conca[i]=b[aux];
+            aux++;
+        }
+        return conca;
+    }
+
     //Ejercicio 50
     public static int[] mezcla(int[] a, int[] b) {
         int[] mezcla = new int[a.length+b.length];
@@ -237,11 +255,20 @@ public class funcArrayUni {
                 aux++;
             }
             contador++;        
-        }
-               
+        }               
         return mezcla;
-        
-        
+    }
+
+    public static int[] quitaRepetido(int[]a) {
+        int[] noR = new int[a.length-4];
+        int aux =0;                
+        for (int i = 0; i < a.length-1; i++) {            
+            if (a[i] != a[i+1]){
+                noR[aux]= a[i];
+                aux++;                                              
+            }                                    
+        }
+        return noR;        
     }
 
 }

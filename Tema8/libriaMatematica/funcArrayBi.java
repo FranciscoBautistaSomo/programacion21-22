@@ -14,7 +14,7 @@ public class funcArrayBi {
 
     public static void muestraArrayIntBi(int matriz[][]) {
         for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz.length; j++) {
+            for (int j = 0; j < matriz[0].length; j++) {
                 System.out.printf("%3d |",matriz[i][j]);    
             }
             System.out.println();
