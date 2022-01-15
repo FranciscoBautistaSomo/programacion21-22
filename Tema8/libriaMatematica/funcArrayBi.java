@@ -107,4 +107,21 @@ public class funcArrayBi {
             }        
         return diagonal;
     }
+
+    //Ejercicio 53
+    public static int nEsimo(int[][] n, int posicion) {
+        int numBusc = -1;        
+        int contador = 0;
+        int maximo = n.length*n[0].length;
+        for (int i = 0; i < n.length; i++) {
+            for (int j = 0; j < n[0].length; j++) {
+                
+                if((contador == posicion) && (posicion <= maximo)){
+                    numBusc = n[i][j];                                                           
+                }
+                contador++;                
+            }   
+        }
+        return numBusc;
+    }
 }

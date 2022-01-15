@@ -214,6 +214,19 @@ public class funcArrayUni {
             return arrayCon7;
         }
     }
+    //Ejercicio 47
+    public static String convierteArrayEnString(int[] a) {
+        String arrayString = "";
+        if (a.length > 0) {
+            for (int i = 0; i < a.length; i++) {
+                arrayString +=a[i];
+            }              
+        }else{
+            arrayString +="\"\"";
+        }        
+        return arrayString;
+    }
+
 
     //Ejercicio 48
     public static int[] concatena(int[]a, int[]b) {
@@ -231,6 +244,16 @@ public class funcArrayUni {
             aux++;
         }
         return conca;
+    }
+
+    //Ejercicio 52
+    public static int aleatorioDeArray(int[] a) {
+        int aleatorio=0;
+        int len = a.length;
+        int indiceAle = (int)(Math.random()*len);
+        aleatorio = a[indiceAle];
+
+        return aleatorio;
     }
 
     //Ejercicio 50
@@ -258,7 +281,7 @@ public class funcArrayUni {
         }               
         return mezcla;
     }
-
+    //Usado para ejercicio 56, pero descartado
     public static int[] quitaRepetido(int[]a) {
         int[] noR = new int[a.length-4];
         int aux =0;                
@@ -269,6 +292,20 @@ public class funcArrayUni {
             }                                    
         }
         return noR;        
+    }
+    //Usado para ejercicio 56
+    public static int[] quitarPosArray(int[]a, int pos) {
+        int len = a.length-1;
+        int[] r = new int[len];
+        int aux = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (i!=pos) {
+                r[aux]=a[i];
+                aux++;
+            }
+            
+        }
+        return r;
     }
 
 }
