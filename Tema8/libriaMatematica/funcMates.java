@@ -243,8 +243,20 @@ public class funcMates{
         binarioTxt=resto+binarioTxt;
       } while (cociente >0);
 
-      return Long.parseLong(binarioTxt);
+      return Long.parseLong(binarioTxt);      
+    }
+    //Ejercicio 54 parte 1
+    public static int ocurrencias(int digito, int n) {
+      int contador = 0;
+      int d = 0;
+      do {
+        d = n%10;
+        n /=10;
+        if (digito == d) {
+          contador++;
+        }
+      } while (n > 0);
 
-      
+      return contador;
     }
 }

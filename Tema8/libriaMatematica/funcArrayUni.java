@@ -307,6 +307,31 @@ public class funcArrayUni {
         }
         return r;
     }
+    //Ejercicio 54 parte 2
+    public static int ocurrencias(int digito, int[] a) {
+        int ocurr=0;
+        for (int i = 0; i < a.length; i++) {
+            if (digito == a[i]) {
+                ocurr++;
+            }
+        }
+        return ocurr;
+    }
+    //Ejercicio 55
+    public static String[] sinRepetir(String[] s){
+        String[] sR = new String[s.length];
+        int aux = 0;
+        for (int i = 0; i < s.length; i++) {
+            
+            if (s[i]!=s[aux]) {
+                sR[aux]=s[i];
+                aux++;                    
+            }
+            
+        }
+        return sR;
+    }
+
 
 }
 
