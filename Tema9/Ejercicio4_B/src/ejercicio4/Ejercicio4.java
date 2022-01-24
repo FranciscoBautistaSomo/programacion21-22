@@ -21,7 +21,7 @@ public class Ejercicio4 {
     //fra1.invierte();
     System.out.println("MULTIPLICACION \n"+multiF.toString());
     
-    System.out.println("---DIVICION--- \n"+diviF.toString());
+    System.out.println("---DIVISION--- \n"+diviF.toString());
     
            
   }
