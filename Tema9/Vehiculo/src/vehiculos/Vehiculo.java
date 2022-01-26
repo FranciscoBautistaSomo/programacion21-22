@@ -1,7 +1,7 @@
 
 package vehiculos;
 
-public class Vehiculo {
+public  class  Vehiculo  {
     private static int vehiculosCreados = 0;
     private static int kilometrosTotales = 0;
     private int kilometrosRecorridos;
@@ -14,7 +14,7 @@ public class Vehiculo {
       return this.kilometrosRecorridos;
     }
     
-    public int verKmsTotoles(){
+    public static int verKmsTotoles(){
       return Vehiculo.kilometrosTotales;
     }
     
