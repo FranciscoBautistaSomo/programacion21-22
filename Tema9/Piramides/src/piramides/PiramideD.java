@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package piramides;
-
+        
+import piramides.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,25 +34,14 @@ public class PiramideD {
 
   //Constructor 2
   public PiramideD(String nombre, int altura, String orienta) {
-    this.nombre = nombre;
-    if (altura <= 0) {
-      System.out.print("Error al introducir altura, valor de altura por defecto.");
-    } else {
-      this.altura = altura;
-    }
+    this (nombre, altura);
     this.orientacion = orienta;
   }
 
   //Constructor 3
   public PiramideD(String nombre, int altura, String orienta, String caracter) {
 
-    this.nombre = nombre;
-    if (altura <= 0) {
-      System.out.print("Error al introducir altura, valor de altura por defecto.");
-    } else {
-      this.altura = altura;
-    }
-    this.orientacion = orienta;
+    this(nombre, altura,orienta);
 
     this.caracterBorde = caracter;
   }
@@ -59,23 +49,15 @@ public class PiramideD {
   //Constructor 4
   public PiramideD(String nombre, int altura, String orienta, String caracter, String caracterIn) {
 
-    this.nombre = nombre;
-    if (altura <= 0) {
-      System.out.print("Error al introducir altura, valor de altura por defecto.");
-    } else {
-      this.altura = altura;
-    }
-    this.orientacion = orienta;
-
-    this.caracterBorde = caracter;
+    this(nombre, altura,orienta,caracter);
 
     this.caracterInto = caracterIn;
   }
 
   //Metodos Set
-  public void dameNombre(String nombre){
+  /*public void dameNombre(String nombre){
       this.nombre = nombre;
-  }
+  }*/
   
   public void dameAltura(int altura){
     this.altura = altura; 
@@ -89,19 +71,21 @@ public class PiramideD {
     this.caracterInto =   caracterIn;  
   }
   
-  public void haciaDonde(String orienta){
+  /*public void haciaDonde(String orienta){
     this.orientacion =   orienta;  
-  }
+  }*/
   
   
   @Override
   public String toString() {
     String orienta = this.orientacion;
     String resultado = "";
-    resultado = this.nombre + "\n";
+    //resultado = this.nombre + "\n";
     switch (orienta) {
       case "Arriba":
-        asteriscos = 1;
+        System.out.println(PintaArriba.PintaArriba(resultado,this.altura,this.caracterBorde,this.caracterInto));
+        System.out.println(this.nombre);
+       /* asteriscos = 1;
         for (int i = this.altura - 1; i >= 0; i--) {
           for (int j = 0; j < i; j++) {
             resultado = resultado + " ";
@@ -119,7 +103,7 @@ public class PiramideD {
           }
           resultado = resultado + "\n";
           asteriscos = asteriscos + 2;
-        }
+        }*/
         break;
       case "Abajo":
         huecosDel = 0;
