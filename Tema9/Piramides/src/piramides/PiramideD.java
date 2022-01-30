@@ -17,7 +17,7 @@ public class PiramideD {
 
   private String nombre = "";
   private int altura = 5;
-  private String caracterBorde = "*";
+  private String caracterBorde = "€";
   private String caracterInto = " ";
   private String orientacion = "Arriba";
   int asteriscos, huecosDel, huecoInt, base;
@@ -83,7 +83,7 @@ public class PiramideD {
     //resultado = this.nombre + "\n";
     switch (orienta) {
       case "Arriba":
-        System.out.println(PintaArriba.PintaArriba(resultado,this.altura,this.caracterBorde,this.caracterInto));
+        System.out.println(PintaArriba.PintaArriba(resultado,this.altura,this.caracterInto,this.caracterBorde));
         System.out.println(this.nombre);
        /* asteriscos = 1;
         for (int i = this.altura - 1; i >= 0; i--) {

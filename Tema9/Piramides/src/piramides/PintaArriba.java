@@ -23,7 +23,7 @@ package piramides;
             if ((k == 0) || (k == asteriscos - 1)) {
               pintado = pintado + caracterBorde;
 
-            } else if (i == 0) {
+            } else if (i == 1) {
               pintado = pintado + caracterBorde;
             } else {
               pintado = pintado + caracterInto;

@@ -21,6 +21,7 @@ public class Piramides {
     //p1.dameNombre(nombre);
     System.out.print("¿De que altura quiere su piramide?");
     altura = txt.nextInt();
+    System.out.println("");
     //p1.dameAltura(altura);
     
     System.out.println("¿Con qué caracter exterior lo quiere pintar?");
@@ -33,7 +34,7 @@ public class Piramides {
     orientacion = txt.nextLine();
     System.out.print("Su piramide gracias.");
     //p1 = new PiramideD(nombre, altura);
-    p2 = new PiramideD(nombre, altura, orientacion, caracterEx, caracterIn);
+    p2 = new PiramideD(nombre, altura, orientacion);
     //System.out.println(p1.toString());
     System.out.println();
     System.out.println(p2.toString());

@@ -23,7 +23,7 @@ public class Ejercicio4 {
     
     System.out.println("---DIVISION--- \n"+diviF.toString());
     
-    ejercicio4.libreriaMatematica.funcArrayUni.convierteArrayEnString(a);
+    //ejercicio4.libreriaMatematica.funcArrayUni.convierteArrayEnString(a);
            
   }
   
