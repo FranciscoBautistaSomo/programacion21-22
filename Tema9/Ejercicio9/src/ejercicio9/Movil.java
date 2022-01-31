@@ -5,6 +5,8 @@
  */
 package ejercicio9;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author usuario
@@ -27,16 +29,16 @@ public class Movil extends Terminal{
   @Override
   public void llama(Terminal t, int tiempo){
     super.llama(t,tiempo);
-    double minutos = (double)consumo /  60;
+    double minutos = (double)tiempo / 60;
     switch (this.tarifa) {
       case "rata":
-        this.consumo += 0.06*tiempo;        
+        this.consumo += (0.06*minutos);        
         break;
       case "mono":
-        this.consumo  += 0.12*tiempo;        
+        this.consumo  += (0.12*minutos);        
         break;
       case "bisonte":
-        this.consumo  += 0.3*tiempo;        
+        this.consumo  += (0.3*minutos);        
         break;   
       default:
         throw new AssertionError();
@@ -44,9 +46,10 @@ public class Movil extends Terminal{
   }
   
    @Override
-  public String toString(){    
+  public String toString(){
+     DecimalFormat formatoEuros = new DecimalFormat("0.00");
     String salida ="";
-    salida += super.toString() +" - tarificados "+this.consumo+" euros";
+    salida += super.toString() +" - tarificados "+formatoEuros.format(this.consumo)+" euros";
     return salida;  
   }
 }
