@@ -9,7 +9,7 @@ package ejercicio12;
  *
  * @author usuario
  */
-public class Publicacion {
+public abstract class Publicacion {
     
     private String ISBN;
     private String titulo;

@@ -11,8 +11,8 @@ package ejercicio12;
  */
 public interface Prestable {
   
-  void presta(Publicacion p);
-  void devuelve(Publicacion p);
-  boolean estarPrestado(Publicacion p);
+  void presta();
+  void devuelve();
+  boolean estarPrestado();
   
 }
