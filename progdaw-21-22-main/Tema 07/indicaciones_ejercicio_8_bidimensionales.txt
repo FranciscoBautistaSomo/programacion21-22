@@ -1,0 +1,27 @@
+String x = "e2";
+
+char fila
+char columna
+
+Extracción de los caracteres:
+
+fila = x.charAt(1)
+columna = x.charAt(0)
+
+Conversión del carácter a número-coordenada:
+
+columnaNum = (int)columna - (int)'a';
+filaNum = 8 - ((int)fila-(int)'0')
+
+
+
+Dada una coordenada numérica (f,c) correspondiente a una matriz bidimensional,
+f,c
+
+Conversión a coordenadas en el formato "tablero ajedrez":
+char columAje;
+int filaAJe;
+
+columnaAje = (char)((int)'a' + c)
+filaAje = 8 - f
+

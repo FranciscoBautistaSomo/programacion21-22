@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <p><br>
+    <div>Pintar Piramides</div>
+    <form action="pintaPiramide.jsp" method="POST">
+      <label>¿Introduzca la altura del triangulo?</label>
+      <input type="number" name="alturaP"><br>
+      <label>¿Introduzca el caracter a pintar?</label>
+      <input type="text" name="caracteOut"><br>
+      <label>¿Introduzca el caracter a pintar dentro?</label>
+      <input type="text" name="caracteIn"><br>
+      <label>Elija un color</label>
+      <select aria-label="Selecciona color" id="color" name="color">
+        <option selected> Elije color</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>        
+      </select>      
+      <p><br>
+       <button type="submit">Pintar triangulo</button>
+          
+    </form>
+  </body>
+</html>

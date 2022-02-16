@@ -1,0 +1,15 @@
+Realice un programa que para cada valor de una matriz bidimensional calcule
+el valor medio de su "zona". El valor medio para una casilla dada se calculará
+teniendo en cuenta los valores que la rodean y él mimso, es decir, un total de
+9 valores, salvo en los límites de la matriz, donde las casillas que rodean a una
+determinada casilla serán sólo las posiciones válidas de la matriz.
+
+El programa rellenará aleatoriamente la matriz entre los valores de un rango dado,
+y de forma reiterada:
+- presentará la matriz por pantalla
+- pedirá al usuario si quiere "suavizar" la matriz
+- en caso afirmativo:
+-- se llevará a cabo el cálculo de las medias anteriores sobre una matriz auxiliar
+-- se sustiturá la matriz original por la matriz "suavizada"
+-- se volverá al principio del ciclo
+- en caso negativo, el programa dejará de iterar y finalizará

@@ -57,7 +57,7 @@ public class Tienda {
         
         resultado += "Listado de artículos del almacén de la tienda "+this.nombre+"\n";
         for (int i = 0; i < articulosDeTienda.length; i++) {          
-            resultado += this.articulosDeTienda[i].toString()+"\n";        
+            resultado += this.articulosDeTienda[i]+"\n";        
         }
         
          return resultado;

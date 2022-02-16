@@ -1,0 +1,19 @@
+- Realizar/controlar los ejercicios del tema 4, desde el nº 1 al nº 14.
+
+En muchos de ellos habrá que detenerse a pensar los pasos que hay que dar.
+Si no lo vemos, sugiero pasar al siguiente ejercicio, para realizar antes
+los que nos resulten más fáciles. Y dejar los que nos cuesten más para el
+final.
+
+- Realizar una instalación del entorno de programación en una máquina virtual.
+
+En una máquina virtual con sistema operativo "recién instalado" Windows o Linux,
+realizar la instalación del software OpenJDK (kit de desarrollo de Java) y
+de los entornos de desarrollo Geany y NetBeans, siguiendo las orientaciones
+que se dan en el libro.
+
+En caso de duda, recurra a vídeos que podrá encontrar en internet. Y si la
+duda persiste, apúntela y comuníquela al profesor.
+
+A lo largo de la semana que viene tendrá que mostrar al profesorado esta
+instalación.

@@ -1,0 +1,20 @@
+Crear una clase PiramideHueca.
+
+Atributos:
+
+- altura (>=0)
+- Carácter con el que se va a pintar
+
+
+Métodos:
+
+- Constructor al que se le pasa altura y carácter
+- cambiar el carácter
+- cambiar la altura
+- toString
+
+
+Desde el programa principal, 
+- pedir los datos para un par de pirámides
+- crear los objetos correspondientes
+- vizualizar por consola las dos pirámides

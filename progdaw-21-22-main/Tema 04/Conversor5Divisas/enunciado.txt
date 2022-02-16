@@ -1,0 +1,16 @@
+Realice un programa que convierta a 5 divisas una cantidad dada:
+
+euro
+dolar
+libra
+yen
+yuan
+
+Busque los factores de conversión en internet.
+
+El programa solicitará al usuario la divisa de entrada, así como la cantidad de dinero en dicha
+divisa.
+
+Una vez realice los cálculos oportunos, el programa mostrará la equivalencia de la cantidad de
+dinero introducida en las 5 divisas indicadas.
+

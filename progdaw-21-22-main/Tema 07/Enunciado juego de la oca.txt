@@ -1,0 +1,27 @@
+Implemente en JAVA el juego de la oca para 4 jugadores.
+
+El programa debe simular, por turnos, la tirada de datos, informando en cada "paso" del jugador
+a quien le toca y del número que le sale, y debe informar si cae en alguna casilla "especial".
+Tras cada tirada, debe mostar el estado del tablero. Por tanto, debe visualizarse en qué casillas
+están las fichas de los jugadores.
+
+Entre tirada y tirada, puede hacer que el programa espere a que se pulse ENTER.
+
+
+Total casillas: 63
+
+Casillas especiales:
+- OCAS
+- El puente
+- Laberinto: te manda a la casilla 30
+- La posada: se pierden 2 turnos
+- El pozo: se pierden 3 turnos, a no ser que antes alguien "pase" por esa casilla o caiga en ella
+- La cárcel: 3 turnos
+- La muerte: te manda a la casilla 1
+- Dados: de dado a dado
+
+Para almacenar las posiciones de los jugadores, puede utilizarse una matriz bidimensional de tantas
+filas como jugadores y columnas como casillas tiene el tablero.
+
+Además, necesitará hacer uso de más variables, para poder mantener el estado en el que se encuentran
+los jugadores.

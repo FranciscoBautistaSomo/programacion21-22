@@ -1,0 +1,8 @@
+Plantear el algoritmo a seguir para la resolución de estos ejercicios:
+
+Arrays bidimensionales:
+
+6
+8
+9
+13

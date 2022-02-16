@@ -1,0 +1,60 @@
+Configuración base de Git:
+
+git config --global user.name "Nombre del usuario"
+git config --global user.email "profesorjim@gmail.com"
+git config --global credential.helper 'cache --timeout=36000'
+
+Clonar el respositorio desde GitHub a local
+
+git clone git@github.com:<nombredeusuario>/<nombrederepositorio>.git
+Ejemplo concreto: git clone git@github.com:profesorjim/progdaw-21-22.git
+
+---> Con este mecanismo de clonación, el repositorio queda configurado para actualizaciones vía SSH
+Pero es necesario disponer de unas credencias en alguna de las cuentas de GitHub.
+
+Para clonar el respositorio vía https:
+
+git clone https://github.com/<nombredeusuario>/<nombrederepositorio>
+
+Si hubiéramos clonado el repositorio vía https y quisiéramos actualizarlo vía ssh, podemos
+cambiar la configuración de subida para que use ssh así:
+
+git remote set-url origin git@github.com:<nombredeusuario>/<nombrederepositorio>.git
+
+
+Actualiza el repositorio (desde local a GitHub)
+
+git add . --all
+git commit -m "actualizacion"
+git push origin main
+
+Actualiza el respositorio (desde GitHub a local)
+
+git pull
+
+
+----------------
+
+Para generar unas claves de seguridad que nos permitan identificarnos
+ante GitHub mediante SSH, debemos tener instalado el software de "openssh"
+oportuno, y podemos ejecutar el siguiente comando:
+
+ssh-keygen -t rsa -b 4096 -C <correoelectronico>
+
+Esto generará un par de ficheros en la subcarpeta .ssh, la cual está dentro de
+la carpeta "home" de usuario. Los ficheros son:
+
+id_rsa --> contiene la clave privada
+id_rsa.pub ---> contiene la clave pública, que es la que hay que subir a
+GitHub
+
+
+En el caso de que nos llevemos la clave privada (fichero id_rsa) a otra
+máquina, con la idea de seguir utilizando las mismas credenciales, debemos
+indicarle al sistema que añada la clave privada al anillo de claves, es decir,
+que el agente ssh conzca de dicha clave:
+
+ssh-add ~/.ssh/id_rsa
+
+De esta forma no tendremos que generar una pareja de claves nueva, y
+reutilizaremos la existente.

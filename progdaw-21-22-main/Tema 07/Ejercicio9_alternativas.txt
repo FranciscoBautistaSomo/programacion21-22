@@ -1,0 +1,30 @@
+Probar a rotar un array 1 posición en el sentido de las agujas del reloj, que
+tenga 2 filas por un número "elevado" de columnas.
+
+Probar a rotar un array 1 posición en el sentido de las agujas del reloj, que
+tenga un número "elevado" de filas  por 2 columnas.
+
+
+1 2 3  4  5  6
+7 8 9 10 11 12
+
+7 1  2  3  4 5
+8 9 10 11 12 6
+
+
+
+1 7
+2 8
+3 9
+4 10 
+5 11
+6 12
+
+
+2  1
+3  7
+4  8
+5  9
+6  10
+12 11
+
