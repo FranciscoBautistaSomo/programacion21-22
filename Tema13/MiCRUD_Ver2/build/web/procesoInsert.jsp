@@ -23,8 +23,8 @@
           Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/CRUD_Bautista_Somosierra_INSTITUTO", "admin", "admin");
           Statement s = conexion.createStatement();
           
-          String sentencia= "INSERT INTO estudiante VALUES (NumMatri, NomEst, DirecEst, ApeEst, pssword)(";
-          sentencia += "'"+request.getParameter("numMatri")+"',";
+          String sentencia= "INSERT INTO estudiante  (NumMatri, NomEst, DirecEst, ApeEst, pssword) VALUES (";
+          sentencia += Integer.parseInt(request.getParameter("numMatri"))+",";
           sentencia += "'"+request.getParameter("nombre")+"',";          
           sentencia += "'"+request.getParameter("direccion")+"', ";
           sentencia += "'"+request.getParameter("apellido")+"', ";
@@ -32,7 +32,7 @@
           sentencia += ")";
           
           s.execute(sentencia);
-          
+          //out.print(sentencia);
           conexion.close();
           %>
           <a href="index.jsp">Ir al principio</a>
